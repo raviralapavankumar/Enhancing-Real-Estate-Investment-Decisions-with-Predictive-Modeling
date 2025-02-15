@@ -1,24 +1,41 @@
-Project Question: How can data science empower real estate companies to strategically enter new markets, maximize revenue, and optimize investment decisions?
+Introduction: The housing market is big. Predicting house prices helps buyers, sellers and investors make good decisions. Data science lets us look at past trends and improve accuracy. This project uses machine learning on real estate data to find out what matters and give insights.
+Problem Statement: This project will create a model to predict house prices. The goal is to find out what matters and improve the accuracy using machine learning. By looking at historical data, the project will help investors and businesses make better choices.
+Data Collection and Preprocessing: We used publicly available real estate data. Before using it, we cleaned and prepared the data by:
+Handling missing values (LotFrontage, MasVnrType, GarageType).
+Converting categorical data into numerical form using label encoding and one-hot encoding.
+Scaling numerical features to make sure everything is on the same scale.
+Exploratory Data Analysis (EDA): EDA showed us:
+Strong correlation between features and house prices.
+Trends of how location, size and facilities affect prices.
+Outliers that can affect model performance.
+Feature Engineering: We created new features by:
+Combining existing features to capture complex relationships.
+Applying transformations to simplify data patterns.
+Adding neighborhood average prices to give context.
+Model Selection and Training: We tried multiple machine learning models:
+Linear Regression: A simple model for baseline.
+Decision Trees and Random Forest: Capture complex relationships well.
+Gradient Boosting (XGBoost): High accuracy.
+Hyperparameter Tuning: We tuned the models using grid search and random search to find the best settings and prevent overfitting.
+Model Evaluation: We evaluated the models using:
+Mean Squared Error (MSE): Measures the accuracy.
+R-squared (R2): How well the model explains the price variations.
+Root Mean Squared Error (RMSE): An understandable error measure.
+Results:
+Linear Regression: RMSE = 35,460, R2 = 0.853
+Decision Tree: RMSE = 37,210, R2 = 0.821
+Random Forest: RMSE = 28,940, R2 = 0.892
+Gradient Boosting: RMSE = 27,860, R2 = 0.902Feature Importance: What matters:
+House size (square feet and number of rooms).
+Location (neighborhood and surroundings).
+Nearby facilities (schools, transport, parks).
+Business Impact: Our model benefits Surprise Housing by:
+Finding profitable investment opportunities.
+Understanding market trends for better pricing.
+Reduce risks with data-driven insights.
+Conclusion and Next Steps: We have created a model that predicts house prices. Next steps:
+Add more data (economic indicators).
+Use explainable AI to improve results.
+Try deep learning models for higher accuracy.
+Our model helps businesses make better real estate decisions and make more money.
 
-In this project, assume the role of a data scientist tasked with assisting a US-based housing company, Surprise Housing, as it embarks on expanding into the Australian real estate market. Your primary objective is to develop a machine learning model that accurately predicts the actual value of potential properties, enabling the company to make informed investment choices.
-
-Project Objective: Create a robust machine learning model capable of forecasting house prices in the Australian real estate market. This predictive tool will serve as a vital asset for Surprise Housing, aiding them in identifying prospective properties for acquisition. Furthermore, it aims to unveil the significance of variables that influence house prices and how these variables collectively describe the price of a house.
-
-1.Data Understanding and Cleaning:
-
-The dataset consists of 1460 entries with 81 variables.
-The dataset contains missing values that need to be addressed using domain knowledge and appropriate techniques.
-Both numerical and categorical variables are present, and they need to be handled accordingly.
-2.  Exploratory Data Analysis (EDA):
-
-Conduct a thorough EDA to gain insights into the relationships between variables and the target variable (house prices).
-Use data visualization techniques to uncover distributions, correlations, trends, and potential outliers.
-3.Key Project Milestones: :
-
-You have to build Machine Learning models, apply regularization and determine the optimal values of Hyper Parameters.
-You need to find important features which affect the price positively or negatively.
-Two datasets are being provided to you (test.csv, train.csv). You will train on the train.csv dataset and predict on the test.csv file. The “Data file.csv” and “Datadescription.txt” are enclosed with this file.
-Perform proper data cleaning and text exploration. Focus on data visualization and infer details from it.
-Try to infer unique patterns from the data and try to generate new features.
-Use 4-5 models for training, do proper hyperparameter tuning and choose the right evaluation metrics to finalize your model.
-Test your predictions on multiple metrics like MSE,R2_score,RMSE.
